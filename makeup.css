@@ -1,0 +1,164 @@
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:pink;
+  position:relative;
+}
+
+.logo{
+  font-weight:bold;
+  font-size:1.2rem;
+}
+
+/* Navigation links */
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+
+/* Hide checkbox */
+#menu-toggle{
+  display:none;
+}
+
+/* Mobile menu icon */
+.menu-icon{
+  display:none;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* Hero Section */
+.hero{
+  background:#ffe4f2;
+  padding:40px;
+  text-align:center;
+}
+
+/* Services Section */
+#services{
+  padding:30px;
+  text-align:center;
+}
+
+.service-box{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.card{
+  width:250px;
+  background:#fff;
+  padding:15px;
+  border:1px solid #ddd;
+}
+
+/* Gallery Section */
+.gallery-box{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  padding:20px;
+}
+
+.gallery-box img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+}
+
+/* Contact Section */
+#contact{
+  padding:30px;
+  text-align:center;
+}
+
+form{
+  max-width:350px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input, textarea{
+  padding:10px;
+  border:1px solid #ccc;
+}
+
+button{
+  padding:10px;
+  background:pink;
+  border:none;
+  cursor:pointer;
+}
+
+/* Footer */
+footer{
+  background:#ddd;
+  text-align:center;
+  padding:10px;
+  margin-top:20px;
+}
+
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul{
+    display:none; /* hide menu by default */
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    padding:10px;
+    width:150px;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav ul{
+    display:flex; /* show menu when checkbox checked */
+  }
+
+  .menu-icon{
+    display:block; /* show fa-bars icon on mobile */
+  }
+
+  .service-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .gallery-box img{
+    width:100px;
+    height:100px;
+  }
+}
+
+
+
